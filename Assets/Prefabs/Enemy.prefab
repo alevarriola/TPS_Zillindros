@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3198549599445282220}
   - component: {fileID: 2432263064000655999}
   - component: {fileID: 784600609002975461}
+  - component: {fileID: 5846550320478008885}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -70,7 +71,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 002114924ed549348a374c22169526ee, type: 2}
+  - {fileID: 2100000, guid: da0ab77273f5b034eaa8aa358f630060, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -125,11 +126,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9101622328877591840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd6aaa82c606886448f5ac05f9374b93, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d22b9820bd968b42afce2fc4f67dcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDummy
   maxHealth: 50
-  hitVfxPrefab: {fileID: 0}
+  hitVfxPrefab: {fileID: 1723335645592691286, guid: d7bdfc2919690be4c822917147013748, type: 3}
 --- !u!195 &2432263064000655999
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -161,17 +162,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 9101622328877591840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 229c3e587ead51e4f80d6399d09d45b8, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e6940f99eee41e438e90d71d74988e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyChaser
   player: {fileID: 0}
-  detectRange: 50
-  giveUpRange: 35
+  detectRange: 125
+  giveUpRange: 135
   repathInterval: 0.15
   faceTargetSpeed: 10
   requireLineOfSight: 0
   losMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  moveSpeed: 3.5
+  moveSpeed: 7
   acceleration: 8
+--- !u!114 &5846550320478008885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9101622328877591840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1cb2fc3f14b7534196dc8cff50bce08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMeleeAttack
+  damage: 12
+  attackCooldown: 1.5
+  attackRange: 1.5
+  attackWindup: 0.2
+  debugAttackRange: 1
+  attackVfx: {fileID: 1723335645592691286, guid: d7bdfc2919690be4c822917147013748, type: 3}
+  attackSfx: {fileID: 0}
+  audioSource: {fileID: 0}

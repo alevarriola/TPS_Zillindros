@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5315349927665837462}
   - component: {fileID: 2623322886503283724}
-  - component: {fileID: -1541999143423609}
   m_Layer: 0
   m_Name: PelotitasBurstEffect
   m_TagString: Untagged
@@ -42,27 +41,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1723335645592691286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4bdca726db498542ab7d3525d6029af, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cb9aa953933cf04e85eec0745d25689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PelotitasBurst
-  pelotitaPrefab: {fileID: 5905134461481983318, guid: 6495d8a585585b44d877ce05e388f25b, type: 3}
-  count: 5
+  pelotitaPrefab: {fileID: 5905134461481983318, guid: 60c51a5d2240f35448efe10be51b5613, type: 3}
+  count: 15
   minSpeed: 1.5
   maxSpeed: 3.5
   upwardBias: 0.5
   spread: 0.4
-  color: {r: 0.764151, g: 0.118149, b: 0.05406728, a: 1}
+  color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   selfDestroy: 0.1
---- !u!114 &-1541999143423609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723335645592691286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e63cec7b5e682b649baf2e613c369dd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PelotitaLifetime
-  lifetime: 3
