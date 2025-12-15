@@ -32,6 +32,8 @@ public class EnemySpawner : MonoBehaviour
     Bounds _groundBounds;
     bool _running;
 
+    public System.Action<GameObject> OnSpawned;
+
     void OnEnable()
     {
         // Resolver bounds del ground al habilitar
@@ -41,7 +43,6 @@ public class EnemySpawner : MonoBehaviour
             var p = GameObject.FindGameObjectWithTag("Player");
             if (p) player = p.transform;
         }
-        StartSpawner();
     }
 
     void OnDisable()
@@ -93,6 +94,7 @@ public class EnemySpawner : MonoBehaviour
                 var chaser = go.GetComponent<EnemyChaser>() ?? go.GetComponentInChildren<EnemyChaser>();
                 if (chaser && player) chaser.SetPlayer(player);
 
+                OnSpawned?.Invoke(go);
                 return;
             }
         }
