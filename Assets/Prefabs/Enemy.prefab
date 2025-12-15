@@ -131,6 +131,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDummy
   maxHealth: 50
   hitVfxPrefab: {fileID: 1723335645592691286, guid: d7bdfc2919690be4c822917147013748, type: 3}
+  dropChace: 0.3
+  minAmmoDrop: 10
+  maxAmmoDrop: 30
+  ammoPickupPrefab: {fileID: 2668756260429181551, guid: 7e25742d34d9e804b8adcbc26e87d9ce, type: 3}
+  dropChacehp: 0.2
+  minhpDrop: 10
+  maxhpDrop: 20
+  healPickupPrefab: {fileID: 8300824244402230422, guid: e71033aaed277634287b5cd174833787, type: 3}
 --- !u!195 &2432263064000655999
 NavMeshAgent:
   m_ObjectHideFlags: 0
